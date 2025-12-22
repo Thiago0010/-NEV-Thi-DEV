@@ -303,7 +303,7 @@ const setupWhatsappLinkGenerator = () => {
    8. INICIALIZAÇÃO E EVENT LISTENERS GERAIS
    ========================================= */
 document.addEventListener("DOMContentLoaded", () => {
-    
+    window.scrollTo(0, 0);
     // --- Carregamento de Preferências ---
     const savedLang = localStorage.getItem('lang') || 'pt';
     updateLanguage(savedLang);
@@ -350,4 +350,5 @@ document.addEventListener("DOMContentLoaded", () => {
             updateLanguage(btn.dataset.lang);
         });
     });
+
 });
