@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Portfolio | Interactive Experience</title>
+    <title>[NEV]²Thi_ii Dev | Interactive Experience</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -25,6 +25,248 @@
 
 
     <style>
+
+.certificacoes{
+    position: relative;
+    padding: 140px 0;
+    overflow: hidden;
+}
+
+.cert-bg-blur{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: .12;
+    z-index: 0;
+}
+
+.cert-bg-1{
+    background: #7c4dff;
+    top: -100px;
+    left: -100px;
+}
+
+.cert-bg-2{
+    background: #00d4ff;
+    bottom: -150px;
+    right: -150px;
+}
+
+.section-header{
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+    margin-bottom: 24px;
+    font-size: .9rem;
+    color: #cfcfcf;
+}
+
+.section-title{
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #9ecbff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle{
+    max-width: 760px;
+    margin: auto;
+    color: rgba(255,255,255,.7);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.certs-grid{
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 30px;
+}
+
+.cert-card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(20px);
+
+    transition:
+    transform .45s ease,
+    border .45s ease,
+    box-shadow .45s ease;
+}
+
+.cert-card:hover{
+    transform: translateY(-12px);
+    border-color: rgba(120,180,255,.35);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45),
+    0 0 40px rgba(100,150,255,.12);
+}
+
+.cert-image-wrapper{
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.cert-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform .7s ease;
+}
+
+.cert-card:hover .cert-img{
+    transform: scale(1.08);
+}
+
+.cert-overlay{
+    position: absolute;
+    inset: 0;
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.1)
+    );
+}
+
+.cert-provider{
+    position: absolute;
+    top: 18px;
+    left: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 14px;
+    border-radius: 999px;
+
+    font-size: .82rem;
+    font-weight: 600;
+
+    backdrop-filter: blur(12px);
+}
+
+.aws{
+    background: rgba(255,153,0,.15);
+    color: #ffb347;
+}
+
+.gcp{
+    background: rgba(66,133,244,.15);
+    color: #7eb3ff;
+}
+
+.azure{
+    background: rgba(0,120,212,.15);
+    color: #79c6ff;
+}
+
+.cert-content{
+    padding: 30px;
+}
+
+.cert-icon{
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(124,77,255,.25),
+        rgba(0,212,255,.18)
+    );
+
+    margin-bottom: 24px;
+
+    font-size: 1.5rem;
+}
+
+.cert-content h3{
+    font-size: 1.35rem;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.cert-content p{
+    color: rgba(255,255,255,.72);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.cert-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.cert-footer span{
+    font-size: .85rem;
+    color: rgba(255,255,255,.45);
+}
+
+.cert-footer button{
+    border: none;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #7c4dff,
+        #00bfff
+    );
+
+    color: white;
+
+    padding: 12px 18px;
+    border-radius: 14px;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.cert-footer button:hover{
+    transform: translateY(-2px) scale(1.03);
+}
+
         /* Variáveis de escopo fechado para não afetar o restante do site */
         .nev-root-container {
             --nev-bg: #050505;
@@ -294,7 +536,7 @@
                     <div class="timeline-date">2024</div>
                     <div class="timeline-content glass" data-tilt>
                         <h3>Frontend Developer</h3>
-                        <p>Criação de interfaces reativas e experiências 3D na web.</p>
+                        <p>Criação de interfaces reativas e experiências interativas na web.</p>
                     </div>
                 </div>
             </div>
@@ -316,13 +558,13 @@
                 </div>
                 <div class="skill-item">
                     <span>PHP / Laravel</span>
-                    <div class="skill-bar"><div style="width: 75%;"></div></div>
-                    <span class="level">Intermediário</span>
+                    <div class="skill-bar"><div style="width: 95%;"></div></div>
+                    <span class="level">Avançado</span>
                 </div>
                 <div class="skill-item">
                     <span>APIs REST/GraphQL</span>
-                    <div class="skill-bar"><div style="width: 35%;"></div></div>
-                    <span class="level">Pouco / Médio</span>
+                    <div class="skill-bar"><div style="width: 50%;"></div></div>
+                    <span class="level">Médio</span>
                 </div>
             </div>
 
@@ -340,8 +582,8 @@
                 </div>
                 <div class="skill-item">
                     <span>React / Vue (Básico)</span>
-                    <div class="skill-bar"><div style="width: 65%;"></div></div>
-                    <span class="level">Intermediário</span>
+                    <div class="skill-bar"><div style="width: 100%;"></div></div>
+                    <span class="level">Avançado</span>
                 </div>
             </div>
 
@@ -366,6 +608,162 @@
         </div>
     </div>
 </section>
+
+<!-- 
+<section class="certificacoes">
+    <div class="cert-bg-blur cert-bg-1"></div>
+    <div class="cert-bg-blur cert-bg-2"></div>
+
+    <div class="container fade-up">
+
+        <div class="section-header">
+            <span class="section-badge">
+                <i class="ri-shield-star-line"></i>
+                Reconhecimento Profissional
+            </span>
+
+            <h2 class="section-title" data-i18n="certs_title">
+                Certificações & Reconhecimentos
+            </h2>
+
+            <p class="section-subtitle" data-i18n="certs_subtitle">
+                Especializações validadas em arquitetura cloud, sistemas escaláveis
+                e engenharia de software moderna.
+            </p>
+        </div>
+
+        <div class="certs-grid">
+
+       
+            <article class="cert-card glass" data-tilt>
+
+                <div class="cert-image-wrapper">
+                    <img src="./image.png"
+                         alt="AWS Certificate"
+                         class="cert-img">
+
+                    <div class="cert-overlay"></div>
+
+                    <span class="cert-provider aws">
+                        <i class="ri-amazon-line"></i>
+                        AWS
+                    </span>
+                </div>
+
+                <div class="cert-content">
+
+                    <div class="cert-icon">
+                        <i class="ri-award-fill"></i>
+                    </div>
+
+                    <h3 data-i18n="cert_1_title">
+                        AWS Certified Solutions Architect
+                    </h3>
+
+                    <p data-i18n="cert_1_desc">
+                        Certificação focada em arquitetura de sistemas distribuídos,
+                        alta disponibilidade e infraestrutura escalável na AWS.
+                    </p>
+
+                    <div class="cert-footer">
+                        <span>Cloud Architecture</span>
+                        <button>
+                            Ver Credencial
+                            <i class="ri-arrow-right-up-line"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </article>
+
+   
+            <article class="cert-card glass" data-tilt>
+
+                <div class="cert-image-wrapper">
+                    <img src="./"
+                         alt="Google Cloud Certificate"
+                         class="cert-img">
+
+                    <div class="cert-overlay"></div>
+
+                    <span class="cert-provider gcp">
+                        <i class="ri-google-line"></i>
+                        Google Cloud
+                    </span>
+                </div>
+
+                <div class="cert-content">
+
+                    <div class="cert-icon">
+                        <i class="ri-award-fill"></i>
+                    </div>
+
+                    <h3 data-i18n="cert_2_title">
+                        Professional Cloud Architect
+                    </h3>
+
+                    <p data-i18n="cert_2_desc">
+                        Especialização em ambientes cloud corporativos, automação,
+                        segurança e arquitetura moderna no ecossistema Google Cloud.
+                    </p>
+
+                    <div class="cert-footer">
+                        <span>Enterprise Cloud</span>
+                        <button>
+                            Ver Credencial
+                            <i class="ri-arrow-right-up-line"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </article>
+
+   
+            <article class="cert-card glass" data-tilt>
+
+                <div class="cert-image-wrapper">
+                    <img src="./cert-azure.png"
+                         alt="Azure Certificate"
+                         class="cert-img">
+
+                    <div class="cert-overlay"></div>
+
+                    <span class="cert-provider azure">
+                        <i class="ri-microsoft-line"></i>
+                        Microsoft Azure
+                    </span>
+                </div>
+
+                <div class="cert-content">
+
+                    <div class="cert-icon">
+                        <i class="ri-award-fill"></i>
+                    </div>
+
+                    <h3 data-i18n="cert_3_title">
+                        Azure Solutions Architect Expert
+                    </h3>
+
+                    <p data-i18n="cert_3_desc">
+                        Reconhecimento avançado em design de soluções empresariais,
+                        integração cloud e infraestrutura inteligente na Azure.
+                    </p>
+
+                    <div class="cert-footer">
+                        <span>Enterprise Solutions</span>
+                        <button>
+                            Ver Credencial
+                            <i class="ri-arrow-right-up-line"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section> -->
+
 
 <!-- ===== NEV Projetos Section ===== -->
 <section id="nev-projects" class="nev-proj-section">
@@ -424,7 +822,7 @@
         </li>
         
         <li class="nev-proj-card">
-          <a href="https://caldasdiromalocacoes.netlify.com" target="_blank">
+          <a href="https://caldasdiromalocacoes.netlify.app" target="_blank">
             <img src="./CaldasDiromaLOC.png" alt="Projeto Nome 3" class="nev-proj-img">
           </a>
           <h3 class="nev-proj-name">Caldas Diroma Locações.</h3>
@@ -434,7 +832,7 @@
         
         <!-- Projeto 1 -->
         <li class="nev-proj-card">
-          <a href="https://parreirasdosul.com/" target="_blank">
+          <a href="https://fiscalizadf.pythonanywhere.com/" target="_blank">
             <img src="./fiscalizadf.png" alt="Projeto Nome 1" class="nev-proj-img">
           </a>
           <h3 class="nev-proj-name">Fiscaliza DF</h3>
@@ -536,7 +934,7 @@ Implementei validação e sanitização de entradas, autenticação com JWT, con
 
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title" data-i18n="projects_title">Projetos</h2>
+            <h2 class="section-title" >Projetos</h2>
             <div class="projects-grid">
                 <article class="project-card glass" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
                     <div class="card-content">
@@ -596,7 +994,7 @@ Implementei validação e sanitização de entradas, autenticação com JWT, con
 
 <section id="why-me" class="section">
     <div class="container fade-up">
-        <h2 class="section-title" data-i18n="whyme_title">🎯 Por Que Me Escolher?</h2>
+        <h2 class="section-title" >Por Que Me Escolher?</h2>
         <p class="section-subtitle" data-i18n="whyme_subtitle">Não sou apenas um programador. Sou seu Arquiteto de Soluções e parceiro de negócios.</p>
 
         <div class="value-pitch-grid">
@@ -695,3 +1093,6 @@ Implementei validação e sanitização de entradas, autenticação com JWT, con
 </body>
 
 </html>
+
+
+
